@@ -8,7 +8,7 @@ package org.example;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-
+//не понятно что проверяется в тестах
 abstract class GraphicTest {
     protected Graphic graphic;
 
