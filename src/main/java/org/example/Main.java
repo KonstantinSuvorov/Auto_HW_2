@@ -2,6 +2,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+//в данном случае интерфейс можно сделать private
 // Общий интерфейс для элементов и контейнеров
 interface Graphic {
     void print();
@@ -11,6 +12,7 @@ interface Graphic {
 class Ellipse implements Graphic {
     @Override
     public void print() {
+        //всё-таки лучше было сделать подсчёт каких-то величин, а не просто вывод на экран
         System.out.println("Ellipse");
     }
 }
