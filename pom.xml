@@ -8,10 +8,60 @@
     <artifactId>ParadoxMonty</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+     <!-- Переменные  <groupId>org.max</groupId>-->
+    <groupId>org.example</groupId>
+    <artifactId>auto</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Переменные -->
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>20</maven.compiler.target>
+        <junit.version>5.7.2</junit.version>
+        <surefire.version>2.22.2</surefire.version>
     </properties>
-    
+
+    <!-- Архивирование -->
+    <packaging>jar</packaging>
+
+    <name>Паттерн Компоновщик проект</name>
+    <description>Домашнее задание №2 Паттерны_Курс введение в автоматизацию тестирования</description>
+    <url>http://org.example</url>
+
+    <!-- Зависимости -->
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.9.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Сборка -->
+    <build>
+        <plugins>
+            <!-- Plugin для компиляции исходных кодов -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>20</source>
+                    <target>20</target>
+                </configuration>
+            </plugin>
+            <!-- Plugin для запуска тестовых классов (запуск тестов) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.version}</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
