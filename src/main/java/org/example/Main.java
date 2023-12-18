@@ -1,4 +1,3 @@
-package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +49,8 @@ public class Main {
         graphic1.add(ellipse2);
         graphic.add(graphic1);
         graphic.add(ellipse3);
+        graphic.remove(graphic1);
+        graphic.remove(ellipse1);
 
         graphic.print();
     }
